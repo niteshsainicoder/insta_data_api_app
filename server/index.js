@@ -32,7 +32,7 @@ app.get('/auth/callback', async (req, res) => {
         client_id: '1602024230487198',
         client_secret: '6d07d0dc2ac30f959c47b815d75af6b6',
         grant_type: 'authorization_code',
-        redirect_uri: 'https://organic-space-meme-wrpqjjvw7jc557x-5173.app.github.dev/',
+        redirect_uri: 'https://insta-data-api-app.vercel.app/',
         code: code,
       },
       headers: {
