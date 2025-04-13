@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "https://organic-space-meme-wrpqjjvw7jc557x-5000.app.github.dev", // only allow this origin
+    origin: "https://insta-data-api-app.vercel.app/", // only allow this origin
     methods: ["GET", "POST"],
     credentials: true,
   })
