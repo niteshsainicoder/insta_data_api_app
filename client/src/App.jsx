@@ -3,7 +3,8 @@ import axios from "axios"
 const App = () => {
 
   const handleInstagramLogin = () => {
-    const redirectUri = `https://www.instagram.com/oauth/authorize?enable_fb_login=0&force_authentication=1&client_id=1602024230487198&redirect_uri=https://organic-space-meme-wrpqjjvw7jc557x-5173.app.github.dev/&response_type=code&scope=instagram_business_basic%2Cinstagram_business_manage_messages%2Cinstagram_business_manage_comments%2Cinstagram_business_content_publish%2Cinstagram_business_manage_insights`; // Ensure this matches the redirect URI set in the App Dashboard
+    const redirectUri = `
+ https://www.instagram.com/oauth/authorize?enable_fb_login=0&force_authentication=1&client_id=1602024230487198&redirect_uri=https://insta-data-api-app.vercel.app/&response_type=code&scope=instagram_business_basic%2Cinstagram_business_manage_messages%2Cinstagram_business_manage_comments%2Cinstagram_business_content_publish%2Cinstagram_business_manage_insights`; // Ensure this matches the redirect URI set in the App Dashboard
 
 
     window.location.href = redirectUri;
@@ -16,7 +17,7 @@ const App = () => {
     console.log(code);
     
     if (code) {
-   const response =  axios.post('https://organic-space-meme-wrpqjjvw7jc557x-5000.app.github.dev/auth/callback',
+   const response =  axios.post('https://insta-data-api-app.onrender.com/auth/callback',
 {code})
     }
   }, [])
