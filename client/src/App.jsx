@@ -15,8 +15,13 @@ const App = () => {
     console.log(code);
     
     if (code) {
-   const response =  axios.post('https://insta-data-api-app.onrender.com/auth/callback',
-{code})
+      axios.get(`https://insta-data-api-app.onrender.com/auth/callback?code=${code}`)
+      .then(res => {
+        console.log('Token response:', res.data);
+      })
+      .catch(err => {
+        console.error('Error:', err);
+      });
     }
   }, [])
   return <div>
