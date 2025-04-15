@@ -47,7 +47,7 @@ app.get('/auth/callback', async (req, res) => {
     const accessToken = tokenRes.data.access_token;
 
     // Redirect to frontend with access token in query (or send JSON if you prefer)
-    res.redirect(`http://localhost:5173/dashboard?token=${accessToken}`);
+    res.redirect(`https://insta-data-api-app.vercel.app/?token=${accessToken}`);
   } catch (err) {
     console.error('Token exchange failed:', err.response?.data || err.message);
     res.status(500).send('OAuth flow failed');

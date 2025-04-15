@@ -10,10 +10,9 @@ const App = () => {
   
       const queryParams = new URLSearchParams(window.location.search);
       const code = queryParams.get("code");
+      const token = queryParams.get("token");
 
-  useEffect(() => {
-    console.log(code);
-    
+  useEffect(() => {    
     if (code) {
       axios.get(`https://insta-data-api-app.onrender.com/auth/callback?code=${code}`)
       .then(res => {
@@ -24,6 +23,10 @@ const App = () => {
       });
     }
   }, [code])
+
+  useEffect(()=>{
+    
+  },[token])
   return <div>
     <button onClick={handleInstagramLogin} className="bg-white text-black">login with Insta</button>
   </div>
